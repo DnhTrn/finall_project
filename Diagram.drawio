@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-21T15:36:58.976Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0" etag="r1GQEsi2UL6URnx_bK-h" version="24.4.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-05-22T11:22:09.603Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0" etag="mYUSU-ZojWa_WHFHdhvM" version="24.4.4" type="github" pages="3">
   <diagram id="iBNpny0mjN00gEUgiwwx" name="Use case 1">
     <mxGraphModel dx="1461" dy="698" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -20,7 +20,7 @@
           <mxGeometry x="1182.37" y="823" width="130" height="62.75" as="geometry" />
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-9" value="Nhận thông báo&lt;div&gt;(UC 2)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="353.25" y="510" width="124.5" height="60" as="geometry" />
+          <mxGeometry x="360" y="569" width="124.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-11" value="include" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-7" target="P2Hgr8UQj_7_ScoWSgwE-42" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -35,7 +35,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-14" value="Đăng nhập&lt;div&gt;(UC 1)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="432" width="115" height="70" as="geometry" />
+          <mxGeometry x="369.5" y="474" width="115" height="70" as="geometry" />
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-15" value="Tìm CLB&lt;div&gt;(UC 7)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="366.31" y="900" width="113.69" height="60" as="geometry" />
@@ -65,7 +65,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-31" value="Hoạt động CLB&lt;div&gt;(UC 3)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="350" y="573.8800000000001" width="126" height="68.06" as="geometry" />
+          <mxGeometry x="352.5" y="641.94" width="126" height="68.06" as="geometry" />
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-35" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-4" target="P2Hgr8UQj_7_ScoWSgwE-7" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -76,20 +76,10 @@
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-37" value="Truy cập Dashboard CLB&lt;div&gt;(UC 8)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="540" y="641.94" width="110" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="P2Hgr8UQj_7_ScoWSgwE-38" value="Truy cập CLB&lt;div&gt;(UC 4)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="360" y="661.13" width="111" height="55.87" as="geometry" />
-        </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-39" value="include" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-37" target="P2Hgr8UQj_7_ScoWSgwE-6" edge="1">
           <mxGeometry x="-0.1496" width="160" relative="1" as="geometry">
             <mxPoint x="673.34" y="430.42" as="sourcePoint" />
             <mxPoint x="770.34" y="606.42" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="P2Hgr8UQj_7_ScoWSgwE-40" value="include" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-38" target="P2Hgr8UQj_7_ScoWSgwE-37" edge="1">
-          <mxGeometry x="-0.1496" width="160" relative="1" as="geometry">
-            <mxPoint x="793.81" y="375.1" as="sourcePoint" />
-            <mxPoint x="822.81" y="563.1" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -147,7 +137,7 @@
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-55" value="Quản lý người dùng&lt;div&gt;(UC 13)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1185.34" y="736" width="118.32" height="69.75" as="geometry" />
         </mxCell>
-        <mxCell id="P2Hgr8UQj_7_ScoWSgwE-57" value="Giải quyết xung đột và kỉ luật&lt;div&gt;(UC 10)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="P2Hgr8UQj_7_ScoWSgwE-57" value="Giải quyết khiếu nại" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1189.49" y="469" width="117.87" height="80" as="geometry" />
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-60" value="include" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-53" target="P2Hgr8UQj_7_ScoWSgwE-42" edge="1">
@@ -202,12 +192,6 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="1666.29" y="678.8" as="sourcePoint" />
             <mxPoint x="1281.29" y="597.8" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="P2Hgr8UQj_7_ScoWSgwE-80" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-1" target="P2Hgr8UQj_7_ScoWSgwE-38" edge="1">
-          <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="189.59" y="685" as="sourcePoint" />
-            <mxPoint x="443.59" y="664" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="P2Hgr8UQj_7_ScoWSgwE-82" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" parent="1" source="P2Hgr8UQj_7_ScoWSgwE-1" target="P2Hgr8UQj_7_ScoWSgwE-31" edge="1">
