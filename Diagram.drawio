@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-18T07:28:04.011Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="rxvHAr-u9fEv8vpHJ9My" version="24.5.4" type="github" pages="13">
+<mxfile host="app.diagrams.net" modified="2024-06-18T07:29:07.021Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="Js1v3MCy6xIR2OTJvQ6L" version="24.5.4" type="github" pages="13">
   <diagram id="iBNpny0mjN00gEUgiwwx" name="Use case 1">
     <mxGraphModel dx="1394" dy="610" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1081,7 +1081,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GoLpjDEiXcGhA6fvAtki-32" value="Club list&amp;nbsp;&lt;div&gt;view&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="GoLpjDEiXcGhA6fvAtki-32" value="Search&amp;nbsp;&lt;div&gt;view&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="149" y="-136" width="90" height="80" as="geometry" />
         </mxCell>
         <mxCell id="GoLpjDEiXcGhA6fvAtki-33" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="GoLpjDEiXcGhA6fvAtki-35" target="GoLpjDEiXcGhA6fvAtki-32">
