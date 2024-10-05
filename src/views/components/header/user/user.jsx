@@ -1,7 +1,7 @@
 import React, {useState } from "react";
 import Avata from "../../avata/avata";
 import Div from "../../div/div";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Text from "../../text/text";
 import { Icon, listIcons } from "../../../../assets/icons/icons";
 import { AnimatePresence } from "framer-motion";

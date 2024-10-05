@@ -1,21 +1,27 @@
-import React from "react";
+import React, {useMemo} from "react";
 import Layout from "../layout/layout";
 import Text from "../../text/text";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Div from "../../div/div";
 import { motion } from "framer-motion";
+import changeMode from './../../../handle/click/changeMode/changeMode';
 const Options=()=>{
-    const {language,theme,langList,changeLanguage}=useSettings();
+    const {language,code,theme,langList,changeLanguage,addSystemNotification}=useSettings();
+    // 
+    const notification=useMemo(()=>{
+        return {title:'success',content:'change-language'}
+    },[]);
     return (
         <Layout width="50%" text={language.content.settings.default.options.language.title} >
             <Text initial={{color:theme.text.content.main}} animate={{color:theme.text.content.main}}
                  margin="15px 0 0 10px" size="12px" >{language.content.settings.default.options.language.description}</Text>
             <Div margin="5px 0 0 0" width="100%" >
-                <Text initial={{color:theme.text.content.main}} animate={{color:theme.text.content.main}}
+                <Text id='language-selected' initial={{color:theme.text.content.main}} animate={{color:theme.text.content.main}}
                  margin="0 10px" size="14px" >{language.content.settings.default.options.language.title+":"}</Text>
-                 <motion.select initial={{height:"24px",width:"60%",borderRadius:'10px'}} onChange={(e)=>changeLanguage(e.target.value)} >
+                 <motion.select aria-labelledby="language-selected"  initial={{height:"24px",width:"60%",borderRadius:'10px'}} 
+                 onChange={(e)=>changeMode(e.target.value,notification,changeLanguage,addSystemNotification)} value={code} >
                     {
-                        langList.map((lang,index)=><motion.option key={index} value={lang} >{language.language[lang]}</motion.option>)
+                        langList.map((lang,index)=><option key={index} value={lang} >{language.language[lang]}</option>)
                     }
                  </motion.select>
             </Div>

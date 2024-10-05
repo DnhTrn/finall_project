@@ -3,7 +3,7 @@ import { Icon, listIcons } from "../../../../assets/icons/icons";
 import React, { useState } from "react";
 import Text from "../../text/text";
 import Div from "../../div/div";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 const Page=({show,text,selected})=>{

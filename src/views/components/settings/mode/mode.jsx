@@ -1,5 +1,5 @@
 import React from "react";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Div from "../../div/div";
 import { motion } from "framer-motion";
 const Mode=({value,hanlde})=>{
@@ -8,7 +8,7 @@ const Mode=({value,hanlde})=>{
         <Div initial={{position:'relative',background:theme.background[value?'second':'layout']
             ,border:`1px solid`}} onClick={()=>hanlde()}
             animate={{background:theme.background[value?'second':'layout']}}
-            radius="25px" height="20px" width="15%" >
+            radius="25px" height="20px" width="50px" >
             <motion.span 
             initial={{position:'absolute',width:'20px',height:'20px',
                 background:theme.background.layout,borderRadius:'25px',left:value?'1px':'58%'}}

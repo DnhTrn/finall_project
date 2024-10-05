@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import { Icon, listIcons } from "../../../../assets/icons/icons";
 import Div from "../../div/div";
 import { AnimatePresence } from "framer-motion";

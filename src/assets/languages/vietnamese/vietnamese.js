@@ -79,6 +79,30 @@ export const vn={
                 confirm:"Xác nhận",
                 cancel:"Hủy"
             }
+        },
+        systemNotification:{
+            success:{
+                title:"Hoàn thành",
+                login:'Đăng nhập thành công',
+                logout:'Đăng xuất thành công',
+                create:'Thêm mới thành công',
+                update:'Cập nhật thành công',
+                delete:'Xóa thành công',
+                'change-language':'Thay đổi ngôn ngữ thành công',
+                'change-theme':'Thay đổi chủ đề thành công',
+                'change-nav-status':'Thay đổi trạng thái thanh điều hướng thành công',
+            },
+            false:{
+                title:"Thất bại",
+                login:'Đăng nhập thất bại',
+                logout:'Đăng xuất thất bại',
+                create:'Thêm mới thất bại',
+                update:'Cập nhật thất bại',
+                delete:'Xóa thất bại',
+                'change-language':'Thay đổi ngôn ngữ thất bại',
+                'change-theme':'Thay đổi chủ đề thất bại',
+                'change-nav-status':'Thay đổi trạng thái thanh điều hướng thất bại',
+            }
         }
 
     },

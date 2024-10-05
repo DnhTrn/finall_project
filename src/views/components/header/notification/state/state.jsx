@@ -1,5 +1,5 @@
 import React from "react";
-import useSettings from "../../../../../models/settings/settings";
+import useSettings from "../../../../../view-models/settingsVM/settingsVM";
 import Div from "../../../div/div";
 
 const State=({value,setValue})=>{

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Grid from "../../components/grid/grid";
 import Pages from "../../components/settings/pages/pages";
-import useSettings from "../../../models/settings/settings";
+import useSettings from "../../../view-models/settingsVM/settingsVM";
 const Setting=()=>{
     const {theme}=useSettings();
     return (

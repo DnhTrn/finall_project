@@ -83,6 +83,30 @@ export const en={
                 confirm:"Confirm",
                 cancel:"Cancel"
             }
+        },
+        systemNotification:{
+            success:{
+                title:"Success",
+                login:'Login success',
+                logout:'Logout success',
+                create:'Create success',
+                update:'Update success',
+                delete:'Delete success',
+                'change-language':'Change a default language success',
+                'change-theme':'Change a default theme success',
+                'change-nav-status':'Change a default navigation status success',
+            },
+            false:{
+                title:"Failed",
+                login:'Login Failed',
+                logout:'Logout Failed',
+                create:'Create Failed',
+                update:'Update Failed',
+                delete:'Delete Failed',
+                'change-language':'Change a default language failed',
+                'change-theme':'Change a default theme failed',
+                'change-nav-status':'Change a default navigation status failed',
+            }
         }
     },
     messages:{
@@ -97,7 +121,7 @@ export const en={
             logout:'Let confirm to logout!',
             delete:'Did you sure to want to delete this field?',
             change:'Did you sure to want to change this object informations??'
-        },
+        }
     },
     
     title:{

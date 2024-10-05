@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Text from "../../text/text";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import React from "react";
 
 const Page=({text,selected})=>{

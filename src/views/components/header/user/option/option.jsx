@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Div from "../../../div/div";
-import useSettings from "../../../../../models/settings/settings";
 import { Icon, listIcons } from "../../../../../assets/icons/icons";
 import setUp_ClickOutSide from "../../../../handle/click/clickOutsite/clickOutsite";
-import useConfirm from "../../../../../models/context/confirm/useConfirm";
-import useAuth from "../../../../../models/context/auth/authService";
+import useConfirm from "../../../../../view-models/confirm/useConfirm";
+import useAuth from "../../../../../view-models/loginVM/authService";
+import useSettings from "../../../../../view-models/settingsVM/settingsVM";
 
 const Option=({show,setShow})=>{
     // 

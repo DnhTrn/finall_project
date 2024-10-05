@@ -1,11 +1,11 @@
 import { AnimatePresence } from "framer-motion";
-import useConfirm from "../../../models/context/confirm/useConfirm";
 import Div from "../div/div";
 import React, { useEffect, useRef } from "react";
-import useSettings from "../../../models/settings/settings";
+import useSettings from "../../../view-models/settingsVM/settingsVM";
 import Title from "../title/title";
 import setUp_ClickOutSide from "../../handle/click/clickOutsite/clickOutsite";
 import Text from "../text/text";
+import useConfirm from "../../../view-models/confirm/useConfirm";
 
 const Confirm=()=>{
     const {state,title,note,close,confirm}=useConfirm();

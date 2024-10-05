@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from 'react';
-import useSettings from '../../../models/settings/settings';
+import useSettings from '../../../view-models/settingsVM/settingsVM';
 import Grid from '../../components/grid/grid';
 import Logo from '../../components/navigation/logo/logo';
 import Mid from '../../components/navigation/mid/mid';
@@ -21,7 +21,7 @@ const Navigation=()=>{
     return (
         <Grid initial={{width:view}} animate={{width:view}} 
         transition={{delay:!viewMode?0.3:0,duration:0.5}} justify="start" align="start"
-        rows='10% 45% 25%' height="100vh" radius="0 15px 15px 0" position="fixed" top='0' left='0'>
+        rows='10% 50% 25%' height="100vh" radius="0 15px 15px 0" >
             <Logo/>
             <Mid show={show}/>
             <Bot show={show}/>

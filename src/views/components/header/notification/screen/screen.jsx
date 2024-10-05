@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Title from "../../../title/title"
 import Content from "../content/content"
 import Div from "../../../div/div";
-import useSettings from "../../../../../models/settings/settings";
+import useSettings from "../../../../../view-models/settingsVM/settingsVM";
 import State from "../state/state";
 import setUp_ClickOutSide from "../../../../handle/click/clickOutsite/clickOutsite";
 

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Icon, listIcons } from "../../../../assets/icons/icons";
 import Grid from "../../grid/grid";
 import Title from "../../title/title";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 
 const PathName=()=>{
     // 

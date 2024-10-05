@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Div from "../../div/div";
 import Title from "../../title/title";
 import Text from "../../text/text";
 const Heading=()=>{
+    // 
     const {language,langList,theme,themeList,changeLanguage,changeTheme}=useSettings();
     // 
     const [checkTheme,setCheckTheme]=useState(false);
@@ -11,8 +12,6 @@ const Heading=()=>{
     // 
     const [showTheme,setShowTheme]=useState(false);
     const [showLanguage,setShowLanguage]=useState(false);
-    // 
-    let langKey=0;
     // 
     useEffect(()=>{
         let timeout;

@@ -32,13 +32,17 @@ export const dark={
             main:gray,
             second:gray,
             th3:blue
+        },
+        systemNotify:{
+            confirm:green,
         }
     },
     text:{
         title:{
             main:white,
             second:black,
-            th3:grayWhite
+            th3:grayWhite,
+            th4:white,
         },
         content:{
             main:white,

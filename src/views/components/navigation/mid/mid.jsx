@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import Title from "../../title/title";
 import Page from "../page/page";
 import { useLocation } from "react-router-dom";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Grid from "../../grid/grid";
 
 const Mid=({show})=>{

@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import Div from "../../div/div";
 import Page from "../page/page";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Title from "../../title/title";
 
 const Pages=()=>{

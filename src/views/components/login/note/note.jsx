@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from 'framer-motion';
 import Text from "../../text/text";
 import Div from "../../div/div";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 
 const Note=()=>{
     const {language,theme}=useSettings();

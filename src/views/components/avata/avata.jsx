@@ -1,6 +1,6 @@
 import React from "react";
 import Div from "../div/div";
-import useSettings from "../../../models/settings/settings";
+import useSettings from "../../../view-models/settingsVM/settingsVM";
 
 const Avata=({radius})=>{
     const {theme}=useSettings();

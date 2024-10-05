@@ -36,6 +36,9 @@ export const light={
             main:grayWhite,
             second:blueWhite,
             th3:blue
+        },
+        systemNotify:{
+            confirm:green,
         }
     },
     text:{
@@ -44,7 +47,8 @@ export const light={
             main:blue,
             // mau phu
             second:black,
-            th3:blueWhite
+            th3:blueWhite,
+            th4:white
         },
         content:{
             // mau noi dung chinh

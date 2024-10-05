@@ -1,10 +1,11 @@
 import React from "react";
 import Div from "../../div/div";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Options from "../options/options";
 import Title from "../../title/title";
 import Text from "../../text/text";
 import Theme from "../theme/theme";
+import Nav from "../nav/nav";
 
 const Default=()=>{
     const {theme,language}=useSettings();
@@ -16,6 +17,7 @@ const Default=()=>{
             <Div width='90%' margin="0 5%" height="100%"  column={true} justify="start" align="start">
                 <Options/>
                 <Theme/>
+                <Nav/>
             </Div>
         </Div>
     );

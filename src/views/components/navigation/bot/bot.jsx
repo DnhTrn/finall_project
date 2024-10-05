@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { useLocation } from "react-router-dom";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import Div from "../../div/div";
 import Title from "../../title/title";
 import Page from "../page/page";

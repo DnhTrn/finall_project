@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Div from "../../div/div";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 import { Icon, listIcons } from "../../../../assets/icons/icons";
 import { AnimatePresence } from "framer-motion";
 import Screen from "./screen/screen";

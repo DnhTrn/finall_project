@@ -1,7 +1,7 @@
 import React from "react";
 import Div from "../../div/div";
 import Title from "../../title/title";
-import useSettings from "../../../../models/settings/settings";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
 
 const Layout=({text,children})=>{
     const {theme}=useSettings();

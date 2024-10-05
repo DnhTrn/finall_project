@@ -4,14 +4,14 @@ import Div from "../../div/div";
 import { Icon, listIcons } from "../../../../assets/icons/icons";
 import Input from "../../input/input";
 import Label from "../../label/label";
-import { checkStatus } from "../../../handle/login/checkStatus/checkStatus";
-import useSettings from "../../../../models/settings/settings";
-import { checkLogin } from "../../../handle/login/checkLogin/checkLogin";
-import { CheckMessage } from "../../../handle/login/checkMessage/checkMessage";
-import { setValue } from "../../../handle/login/setValue/setValue";
-import { focus } from "../../../handle/login/focus/forcus";
-import { checkForm } from './../../../handle/login/checkForm/checkForn';
-import useAuth from "../../../../models/context/auth/authService";
+import { checkStatus } from "../../../../view-models/loginVM/checkStatus";
+import useSettings from "../../../../view-models/settingsVM/settingsVM";
+import { checkLogin } from "../../../../view-models/loginVM/checkLogin";
+import { CheckMessage } from "../../../../view-models/loginVM/checkMessage";
+import { setValue } from "../../../../view-models/loginVM/setValue";
+import { focus } from "../../../../view-models/loginVM/forcus";
+import { checkForm } from '../../../../view-models/loginVM/checkForn';
+import useAuth from "../../../../view-models/loginVM/authService";
 
 const Form =()=>{
     // 
@@ -103,7 +103,7 @@ const Form =()=>{
                 <Div padding="10px 20px" margin="10px 0" radius="15px" cursor="pointer"
                 initial={{background:theme.background.button.main}} color={theme.text.content.second} 
                 whileHover={{background:theme.background.button.second}} 
-                onClick={()=>checkLogin(email,password,setForm,setShowMessage,setLogin)} >{language.content.login.button}</Div>
+                onClick={()=>checkLogin(email,password,setForm,setShowMessage,login)} >{language.content.login.button}</Div>
             </Div>
     );
 };
