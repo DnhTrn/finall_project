@@ -4806,7 +4806,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AWgupJt-UkUYGFCFA5v9" name="event_content">
-    <mxGraphModel dx="2455" dy="931" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1766" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -4865,16 +4865,16 @@
           <mxGeometry x="224.78999999999985" y="800" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="VmevZ-1BlUuRtjcHyMQh-2" value="Thêm người dùng" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="483.08999999999986" y="650.25" width="118.32" height="69.75" as="geometry" />
+          <mxGeometry x="459.9999999999999" y="650.25" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="VmevZ-1BlUuRtjcHyMQh-3" value="Sửa đổi thông tin" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="479.99999999999983" y="750" width="118.32" height="69.75" as="geometry" />
+          <mxGeometry x="459.99999999999983" y="750" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="VmevZ-1BlUuRtjcHyMQh-4" value="Xóa người dùng" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="483.0899999999998" y="840" width="118.32" height="69.75" as="geometry" />
+          <mxGeometry x="459.99999999999983" y="850" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="VmevZ-1BlUuRtjcHyMQh-6" value="Xem thông tin người dùng" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="479.9999999999998" y="930" width="118.32" height="69.75" as="geometry" />
+          <mxGeometry x="459.9999999999998" y="930" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="VmevZ-1BlUuRtjcHyMQh-7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="VmevZ-1BlUuRtjcHyMQh-1" target="VmevZ-1BlUuRtjcHyMQh-2">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -4916,7 +4916,7 @@
           <mxGeometry x="-70.00000000000011" y="800" width="130" height="62.75" as="geometry" />
         </mxCell>
         <mxCell id="cx_hxjfUAMtmL9Jxj6Os-6" value="Phân quyền người dùng" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="479.9999999999998" y="1020" width="118.32" height="69.75" as="geometry" />
+          <mxGeometry x="459.9999999999998" y="1040" width="118.32" height="69.75" as="geometry" />
         </mxCell>
         <mxCell id="cx_hxjfUAMtmL9Jxj6Os-7" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.015;entryY=0.68;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="cx_hxjfUAMtmL9Jxj6Os-1" target="cx_hxjfUAMtmL9Jxj6Os-5">
           <mxGeometry width="160" relative="1" as="geometry">
