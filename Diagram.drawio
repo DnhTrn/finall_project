@@ -4722,15 +4722,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="IqvgCogvqeiSGtFAFkAY-1" value="Quản lý tài chính" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="200" y="770" width="126" height="68.06" as="geometry" />
+          <mxGeometry x="200" y="890" width="126" height="68.06" as="geometry" />
         </mxCell>
         <mxCell id="IqvgCogvqeiSGtFAFkAY-2" value="Thống kê" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="490" y="774.03" width="124.5" height="60" as="geometry" />
+          <mxGeometry x="490" y="894.03" width="124.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="IqvgCogvqeiSGtFAFkAY-5" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="IqvgCogvqeiSGtFAFkAY-1" target="IqvgCogvqeiSGtFAFkAY-2" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="380.5" y="820" as="sourcePoint" />
-            <mxPoint x="554.5" y="856" as="targetPoint" />
+            <mxPoint x="380.5" y="940" as="sourcePoint" />
+            <mxPoint x="554.5" y="976" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CCltnfWknXiOI7rf8iII-1" value="Tham gia hoạt động" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -4791,6 +4791,15 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="294.5" y="480" as="sourcePoint" />
             <mxPoint x="449.5" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PiHp6ndzewZgQRcMX7Ad-8" value="Thay đổi thông tin cá nhân" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="740" width="124.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PiHp6ndzewZgQRcMX7Ad-9" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="PiHp6ndzewZgQRcMX7Ad-1" target="PiHp6ndzewZgQRcMX7Ad-8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="315" y="640" as="sourcePoint" />
+            <mxPoint x="470" y="720" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
