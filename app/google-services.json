@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "100588323064",
+    "firebase_url": "https://finall-server-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "finall-server",
+    "storage_bucket": "finall-server.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100588323064:android:e553364cc4587bc03d3b0d",
+        "android_client_info": {
+          "package_name": "com.clubmanages"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7bcOVBfJvjZNt1AgW2YjPQ_VqdfvvQhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

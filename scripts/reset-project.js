@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const oldDirs = ["app", "components", "hooks", "constants", "scripts"];
+const oldDirs = ["app", "hooks", "constants", "scripts"];
 const newDir = "app-example";
 const newAppDir = "app";
 const newDirPath = path.join(root, newDir);
@@ -63,7 +63,7 @@ const moveDirectories = async () => {
     console.log("\n📁 New /app directory created.");
 
     // Create index.tsx
-    const indexPath = path.join(newAppDirPath, "index.tsx");
+    const indexPath = path.join(newAppDirPath, "app.tsx");
     await fs.promises.writeFile(indexPath, indexContent);
     console.log("📄 app/index.tsx created.");
 
