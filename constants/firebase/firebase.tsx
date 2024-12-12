@@ -7,14 +7,9 @@ import { getStorage } from 'firebase/storage';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBnrhWTZZQgwxGJ4HRY_Z7SvoDbsCOKTbA",
+    
     authDomain: "finall-server.firebaseapp.com",
     databaseURL: "https://finall-server-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "finall-server",
-    storageBucket: "finall-server.appspot.com",
-    messagingSenderId: "100588323064",
-    appId: "1:100588323064:web:32826aee7ad91bd03d3b0d",
-    measurementId: "G-GY90GBB77W"
 };
 
 // Khởi tạo Firebase app nếu chưa được khởi tạo
