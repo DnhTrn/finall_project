@@ -6,5 +6,7 @@ In which:
 - The mobile branch contains source code related to mobile apps designed for students and club members.
 
 The project is implemented with technologies: React, React Native and Firebase.
+
 Made by Danh.
+
 Tran Cong Danh!
