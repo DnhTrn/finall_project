@@ -74,7 +74,7 @@ const Member=()=>{
                 <Text style={style.title}>Memeber ({data?.members?.length})</Text>
                 {load&&<User/>}
                 {!load&&Array.from(data?.members).map((item,key)=> {
-                    if(key<10){
+                    if(key<5){
                         return <SortUser user={item} key={key}/>
                     }
                 })}
@@ -98,7 +98,7 @@ const style =StyleSheet.create({
         width:'100%',
         flexDirection:'column',
         borderStyle:'solid',
-        borderBottomWidth:5,
+        borderBottomWidth:1,
         paddingHorizontal:15,
         paddingVertical:10
     },

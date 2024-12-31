@@ -13,6 +13,7 @@ const ManagementScreen=()=>{
     const {theme}=useSettings();
     return (
         <Tab.Navigator initialRouteName={'club-management-member'} screenOptions={{
+            lazy:true,
             tabBarActiveTintColor: theme.icon.main,
             tabBarInactiveTintColor: theme.icon.second,
             tabBarIndicatorStyle: { backgroundColor: theme.icon.main }, // Đặt màu sắc của thanh hiển thị tab đang chọn

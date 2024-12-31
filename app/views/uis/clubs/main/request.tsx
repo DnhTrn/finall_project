@@ -1,4 +1,4 @@
-import {ScrollView, View} from "react-native";
+import {ScrollView, Text, View} from "react-native";
 import React, {useEffect, useState} from "react";
 import ClubRegisterVM from "@/app/viewModels/clubRegisterVM/clubRegisterVM";
 import SortClub from "@/app/components/skeletons/sortClub";
@@ -24,8 +24,11 @@ const Request=()=>{
     return (
         <ScrollView >
             {!data?.request&&<SortClub/>}
+            {
+                data?.request&&data?.request.length==0&&<Text style={{fontSize:16,marginTop:15,width:'100%',textAlign:'center'}}>You don't have any applications yet.</Text>
+            }
             {/*//@ts-ignore*/}
-            {data?.request&&data?.request.map((club:any,key:number)=><Requested club={club} key={key} />)}
+            {data?.request&&data?.request.length!=0&&data?.request.map((club:any,key:number)=><Requested club={club} key={key} />)}
         </ScrollView>
     );
 }

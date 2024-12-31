@@ -6,36 +6,39 @@ import Subevent from "@/app/views/uis/event/detail/subevent";
 import useSettings from "@/contexts/settings/settings";
 import useData from "@/contexts/datas/data";
 import EventAction from "@/app/views/uis/event/detail/action";
+import {useRoute} from "@react-navigation/core";
 
 const EventContent=()=>{
     const {theme}=useSettings();
-    const {data,setData}=useData();
+    const route=useRoute();
+    //@ts-ignore
+    const {data}=route.params;
     return (
         <KeyboardAvoidingView style={{flex: 1}}
                               behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                               keyboardVerticalOffset={Platform.OS === 'ios' ? 200 : 0}>
             <ScrollView style={style.content}>
-                <Text style={style.main_content}>{data?.currentEvent?.full_description}</Text>
+                <Text style={style.main_content}>{data?.full_description}</Text>
                 <View style={style.start}>
-                    <Text numberOfLines={2} style={style.date}>Start at: {data?.currentEvent?.created_at}</Text>
-                    <Text  numberOfLines={2} style={[{marginLeft:5},style.date]}>End at: {data?.currentEvent?.created_at}</Text>
+                    <Text numberOfLines={2} style={style.date}>Start at: {data?.start_at}</Text>
+                    <Text  numberOfLines={2} style={[{marginLeft:5},style.date]}>End at: {data?.end_at}</Text>
                 </View>
-                {data?.currentEvent?.imgs&&data?.currentEvent?.imgs.length>0&&<Swiper style={style.slide} autoplay={true}
+                {data?.imgs&&data?.imgs.length>0&&<Swiper style={style.slide} autoplay={true}
                    autoplayTimeout={5}
                    loop={true}
                    showsPagination={true}
                    showsButtons={false}>
-                    {data?.currentEvent?.imgs.map((item:any,i:any)=><Image key={i} style={style.img} source={{uri:item}} />)}
+                    {data?.imgs.map((item:any,i:any)=><Image key={i} style={style.img} source={{uri:item}} />)}
                 </Swiper>}
-                {data?.currentEvent?.files&&data?.currentEvent?.files.length>0&&
-                    data?.currentEvent?.files.map((item:any,key:any)=><File url={item} key={key}/>)
+                {data?.files&&data?.files.length>0&&
+                    data?.files.map((item:any,key:any)=><File url={item} key={key}/>)
                 }
-                {data?.currentEvent?.isMain&&<View style={[{borderColor:theme.border.main},style.sub_event]}>
+                {data?.isMain&&<View style={[{borderColor:theme.border.main},style.sub_event]}>
                     <Text style={style.sub_title}>Sub event</Text>
-                    <Subevent id={data?.currentEvent?.id} />
+                    <Subevent id={data?.id} />
                 </View>}
-                {data?.currentEvent&&!data?.currentEvent?.isMain&&<View style={[{borderColor:theme.border.main},style.sub_event]}>
-                    <EventAction />
+                {data&&!data?.isMain&&<View style={[{borderColor:theme.border.main},style.sub_event]}>
+                    <EventAction data={data} />
                 </View>}
             </ScrollView>
         </KeyboardAvoidingView>

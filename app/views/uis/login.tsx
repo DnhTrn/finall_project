@@ -78,18 +78,22 @@ const Login=()=>{
     const handleLogin:any= async ()=>{
         try {
             setLoad(true);
-            const isLogin:boolean= await login(email,password);
+            const {status,first}= await login(email,password);
             setLoad(false);
-            if(!isLogin){
+            console.log(first);
+            if(!status){
                 console.log('false to login');
                 const message={status:lang.notification.status,message:lang.notification.message.login.false};
                 showAlert(message);
                 return;
             }
-            navigation.reset({
-                index: 0,
-                routes: [{ name: 'main' }],
-            });
+
+            if(!first){
+                navigation.replace('main');
+                return;
+            }
+            console.log('checking change password point');
+            navigation.replace('change-password');
         }catch (e) {
 
         }

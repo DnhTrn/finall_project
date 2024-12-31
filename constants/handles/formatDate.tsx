@@ -5,7 +5,7 @@ const formatDate = (timestamp:any) => {
         const month = String(date.getMonth() + 1).padStart(2, '0'); // Tháng bắt đầu từ 0
         const year = date.getFullYear();
 
-        return `${day}/${month}/${year}`;
+        return `${day}-${month}-${year}`;
 
     }catch (e) {
         console.log('null time:'+e);

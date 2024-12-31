@@ -5,11 +5,11 @@ import EventMember from "@/app/views/uis/event/detail/members";
 import React from "react";
 
 const Tab=createMaterialTopTabNavigator();
-const EventScreen=()=>{
+const EventScreen=({data}:any)=>{
     return (
         <Tab.Navigator initialRouteName={'event-content'} screenOptions={{lazy:true}}>
-            <Tab.Screen options={{title:'Content'}} name="event-content" component={EventContent} />
-            <Tab.Screen options={{title:'Members'}} name="event-members" component={EventMember} />
+            <Tab.Screen options={{title:'Content'}} initialParams={{data: data}} name="event-content" component={EventContent} />
+            <Tab.Screen options={{title:'Members'}} initialParams={{data: data}} name="event-members" component={EventMember} />
         </Tab.Navigator>
     )
 }

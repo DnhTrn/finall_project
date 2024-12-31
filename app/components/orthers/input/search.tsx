@@ -14,7 +14,7 @@ const Search=({value,set,handle}:any)=>{
     const {theme}=useSettings();
     return (
         <View style={[{borderColor:theme.border.main},style.input_zone]} >
-            <TextInput value={value} onChangeText={set} onEndEditing={handle} style={style.input} placeholder={'Input member id'}/>
+            <TextInput value={value} onChangeText={set} onEndEditing={handle} style={style.input} placeholder={'Input member code'}/>
             {!value&&<EvilIcons style={{color: theme.icon.th3}} name={'search'} size={24}/>}
             {value&&<TouchableOpacity onPress={()=>set('')}>
                 <MaterialIcons name={'clear'} size={19} style={{color: theme.icon.th3}} />

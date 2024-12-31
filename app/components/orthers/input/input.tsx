@@ -19,8 +19,7 @@ const style=StyleSheet.create({
         height:'auto',
         marginBottom:10,
         flexDirection:'column',
-    }
-    ,
+    },
     inputTitle:{
         color:'black',
         fontSize:14,

@@ -24,7 +24,7 @@ const Events=()=>{
     },[])
     // @ts-ignore
     return (
-        <ScrollView style={{flex:1,paddingTop:10}}>
+        <ScrollView style={{flex:1,paddingTop:10,paddingHorizontal:15}}>
             {!data&&<Event />}
             {/*@ts-ignore*/}
             {data&&data.map((item,key)=><Sort item={item} key={key}/>)}

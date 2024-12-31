@@ -13,6 +13,7 @@ import useData from "@/contexts/datas/data";
 import Confirm from "@/app/components/orthers/alert/confirm";
 import InforContent from "@/app/components/club/items/detail/info/inforContent";
 import Events from "@/app/components/club/items/detail/events";
+import Add from "@/app/views/uis/clubs/main/add";
 
 const Content=()=>{
     const {data,setData}=useData();
@@ -68,43 +69,46 @@ const Content=()=>{
         Confirm(messages,handle);
     }
     return(
-        <ScrollView style={[{backgroundColor:theme.background.main,flex:1}]}>
-            <Head set={setShow}/>
-            {/*@ts-ignore*/}
-            {data?.isMember&&
-                <>
-                    <DetailScreen/>
-                    <Events/>
-                </>
-            }
-            {!data?.isMember&&
-                <InforContent/>
-            }
-            <Modal isVisible={show} style={style.modal}
-                   onBackdropPress={()=>setShow(false)} // Nhấn vào vùng ngoài để đóng modal
-                   onSwipeComplete={()=>setShow(false)}
-                   backdropOpacity={0.4} // Độ mờ của nền
-                   hasBackdrop={true} // Bật nền
-                   avoidKeyboard={true} // Tránh keyboard che modal
-                   useNativeDriverForBackdrop={true} // Sử dụng native driver
-                   animationInTiming={400} // Thời gian animation khi mở
-                   animationOutTiming={400} // Thời gian animation khi đóng
-                   backdropTransitionInTiming={200} // Thời gian animation nền khi mở
-                   backdropTransitionOutTiming={200} // Thời gian animation nền khi đóng
-                   propagateSwipe={true} // Cho phép swipe để đóng modal
-                   swipeDirection={['down']} >
-                <View style={[{backgroundColor:theme.background.main},style.container]}>
-                    {data?.isRequest&&<TouchableOpacity onPress={handlRevo} style={[style.btn]}>
-                        <Entypo name={'log-out'} size={24}/>
-                        <Text style={style.text_btn}>Revocation of a join request</Text>
-                    </TouchableOpacity>}
-                    {data?.isMember&&<TouchableOpacity onPress={handlLeft} style={[style.btn]}>
-                        <Entypo name={'log-out'} size={24}/>
-                        <Text style={style.text_btn}>Left</Text>
-                    </TouchableOpacity>}
-                </View>
-            </Modal>
-        </ScrollView>
+        <>
+            <ScrollView style={[{backgroundColor:theme.background.main,flex:1}]}>
+                <Head set={setShow}/>
+                {/*@ts-ignore*/}
+                {data?.isMember&&
+                    <>
+                        <DetailScreen/>
+                        <Events/>
+                    </>
+                }
+                {!data?.isMember&&
+                    <InforContent/>
+                }
+                <Modal isVisible={show} style={style.modal}
+                       onBackdropPress={()=>setShow(false)} // Nhấn vào vùng ngoài để đóng modal
+                       onSwipeComplete={()=>setShow(false)}
+                       backdropOpacity={0.4} // Độ mờ của nền
+                       hasBackdrop={true} // Bật nền
+                       avoidKeyboard={true} // Tránh keyboard che modal
+                       useNativeDriverForBackdrop={true} // Sử dụng native driver
+                       animationInTiming={400} // Thời gian animation khi mở
+                       animationOutTiming={400} // Thời gian animation khi đóng
+                       backdropTransitionInTiming={200} // Thời gian animation nền khi mở
+                       backdropTransitionOutTiming={200} // Thời gian animation nền khi đóng
+                       propagateSwipe={true} // Cho phép swipe để đóng modal
+                       swipeDirection={['down']} >
+                    <View style={[{backgroundColor:theme.background.main},style.container]}>
+                        {data?.isRequest&&<TouchableOpacity onPress={handlRevo} style={[style.btn]}>
+                            <Entypo name={'log-out'} size={24}/>
+                            <Text style={style.text_btn}>Revocation of a join request</Text>
+                        </TouchableOpacity>}
+                        {data?.isMember&&<TouchableOpacity onPress={handlLeft} style={[style.btn]}>
+                            <Entypo name={'log-out'} size={24}/>
+                            <Text style={style.text_btn}>Left</Text>
+                        </TouchableOpacity>}
+                    </View>
+                </Modal>
+            </ScrollView>
+            {data.isManager&&<Add />}
+        </>
     )
 }
 //

@@ -95,6 +95,7 @@ const ClubModel:any = ()=>{
             console.log(ids);
             const clubRef=query(coll,where("__name__",'in',ids))
             const clubRes=await getDocs(clubRef);
+            console.log(clubRes.docs[0].data());
             const data=await Promise.all(
                 clubRes.docs.map(async (doc:any)=> {
                     const members=await getCountFromServer(
@@ -318,9 +319,9 @@ const ClubModel:any = ()=>{
             res.docs.forEach((doc:any) => {
                 const current:any= members.find((member:any)=>member.user_code == doc.data()?.user_code);
                 if(current.position_id<5){
-                    managers.push({...doc.data(),position_id:current.position_id,join_at:formatDate(current.join_at)});
+                    managers.push({...doc.data(),position_id:current.position_id});
                 }else{
-                    mems.push({...doc.data(),position_id:current.position_id,join_at:formatDate(current.join_at)});
+                    mems.push({...doc.data(),position_id:current.position_id});
                 }
             })
             //
@@ -393,6 +394,7 @@ const ClubModel:any = ()=>{
             return {status:false,message:'false-to-update'};
         }
     }
+
     return {index,joined,create,detail,update,getMembers,addManager,setManager,removeMember}
 }
 //

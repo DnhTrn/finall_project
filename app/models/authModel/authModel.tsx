@@ -1,7 +1,8 @@
 // import {auth, firestore} from "@/app/models/firebase/firebase";
-import { signInWithEmailAndPassword,signOut} from 'firebase/auth';
-import {collection} from "@firebase/firestore";
+import {deleteUser, signInWithEmailAndPassword, signOut, updatePassword} from 'firebase/auth';
+import {collection, updateDoc} from "@firebase/firestore";
 import {auth, firestore} from "@/constants/firebase/firebase";
+import {doc, getDoc} from "firebase/firestore";
 // @ts-nocheck
 const AuthModel:any=()=>{
     const table='users';
@@ -9,14 +10,26 @@ const AuthModel:any=()=>{
     const login:any=async (email:string,password:string)=>{
         try{
             const authCheck = await signInWithEmailAndPassword(auth,email,password);
-            if(authCheck){
-                return true;
+            const req=doc(coll,auth.currentUser?.uid)
+            const user=await getDoc(req);
+            if(!user.exists()){
+                console.log('Tai khoan da bi xoa');
+                // @ts-ignore
+                await deleteUser(auth?.currentUser);
+                await logout();
+                //
+                console.log('Tai khoan da xoa thanh cong');
+                return {status:false}
             }
-            return false;
+            // @ts-ignore
+            if(user.data().firstLogin){
+                return {status:true,first:true}
+            }
+            return {status:true,first:false}
         }
         catch(e){
             console.log('Model:'+e);
-            return false;
+            return {status:false}
         }
     }
     //
@@ -28,7 +41,43 @@ const AuthModel:any=()=>{
             return false;
         }
     }
-    return {login,logout};
+    // 
+    const changePassword=async (password:string)=>{
+        try{
+            const user=auth?.currentUser;
+            if(!user)return {status:false,error:'wrong'};
+            await updatePassword(user,password);
+            const req:any=doc(coll,auth.currentUser?.uid);
+            await updateDoc(req,{firstLogin:false});
+            return {status:true}
+        }catch (e) {
+            console.log('Model: '+e);
+            return {status:false,error:'wrong'};
+        }
+    }
+    //
+    const getInfo=async ()=>{
+        try{
+            const req:any=doc(coll,auth.currentUser?.uid);
+            const res:any=await getDoc(req);
+            return {status:true,data:res.data()};
+        }catch (e) {
+            console.log('M: '+e);
+            return {status:false}
+        }
+    }
+    //
+    const updateInfo=async (data:any)=>{
+        try{
+            const res=doc(coll,auth.currentUser?.uid);
+            await updateDoc(res,data);
+            return {status:true};
+        }catch (e) {
+            console.log('Model: '+e);
+            return {status:false}
+        }
+    }
+    return {login,logout,changePassword,getInfo,updateInfo};
 }
 //
 export default AuthModel;

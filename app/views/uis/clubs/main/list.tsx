@@ -1,4 +1,4 @@
-import {ScrollView} from "react-native";
+import {ScrollView, Text} from "react-native";
 import React, {useEffect, useState} from "react";
 import SortClub from "@/app/components/skeletons/sortClub";
 import clubVM from "@/app/viewModels/clubVM/clubVM";
@@ -28,8 +28,11 @@ const List=()=>{
         <ScrollView style={{flex:1}}>
             {!data?.clubs&&<SortClub/>}
             {
+                data?.clubs&&data?.clubs.length==0&&<Text style={{fontSize:16,marginTop:15,width:'100%',textAlign:'center'}}>There are currently no clubs.</Text>
+            }
+            {
                 // @ts-ignore
-                data?.clubs&&data?.clubs.map((club:any,key:number)=><Sort club={club} index={key} choose={()=>setChoose(club)} set={setVisibale} key={key} />)
+                data?.clubs&&data?.clubs.length!=0&&data?.clubs.map((club:any,key:number)=><Sort club={club} index={key} choose={()=>setChoose(club)} set={setVisibale} key={key} />)
             }
             <Preview visible={visible} club={choose} onClose={()=>setVisibale(false)}/>
         </ScrollView>

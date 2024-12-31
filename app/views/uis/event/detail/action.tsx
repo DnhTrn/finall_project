@@ -8,8 +8,7 @@ import useData from "@/contexts/datas/data";
 import showAlert from "@/app/components/orthers/alert/alert";
 import confirmAlert from "@/app/components/orthers/alert/confirm";
 
-const EventAction=()=>{
-    const {data,setData}=useData();
+const EventAction=({data}:any)=>{
     const [value,setValue]=useState(null);
     const [load,setLoad]=useState(true);
     const [check,setCheck]=useState(false);
@@ -19,7 +18,7 @@ const EventAction=()=>{
     useEffect(() => {
         const fetch=async ()=>{
             try{
-                const {status,value}=await checkAction(data?.currentEvent?.id);
+                const {status,value}=await checkAction(data?.id);
                 console.log(value);
                 if(status){
                     setValue(value);
@@ -46,7 +45,7 @@ const EventAction=()=>{
     const handleSubmit=async ()=>{
         try{
             setLoading(true);
-            const {status}=await attendance(data?.currentEvent?.id,code);
+            const {status}=await attendance(data?.id,code);
             setLoading(false);
             setLoad(true);
             if(!status){
@@ -63,7 +62,7 @@ const EventAction=()=>{
     const handleJoin=async ()=>{
         try{
             setLoading(true);
-            const {status}=await join(data?.currentEvent);
+            const {status}=await join(data);
             setLoading(false);
             setLoad(true);
         }catch (e) {
@@ -74,7 +73,7 @@ const EventAction=()=>{
     const left=async ()=>{
         try{
             setLoading(true);
-            await leftVM(data.currentEvent?.id);
+            await leftVM(data?.id);
             setLoading(false);
             setLoad(true);
         }catch (e) {
@@ -97,7 +96,7 @@ const EventAction=()=>{
             {/*@ts-ignore*/}
             {!load&&!value?.open&&<Text style={[{backgroundColor:theme.icon.th3},{width:'100%'},style.btn_text]}>The event is not yet open.</Text>}
             {/*@ts-ignore*/}
-            {!load&&value?.open&&!value?.join&&<TouchableOpacity onPress={handleJoin} style={[{backgroundColor:theme.icon.main},{width:'100%'},style.btn]}>
+            {!load&&value?.open&&!value?.join&&!value?.close&&<TouchableOpacity onPress={handleJoin} style={[{backgroundColor:theme.icon.main},{width:'100%'},style.btn]}>
                 <Text style={[{color:theme.text.th3},style.btn_text]}>Join</Text>
             </TouchableOpacity>}
             {/*@ts-ignore*/}
@@ -130,6 +129,10 @@ const EventAction=()=>{
             {!load&&value?.open&&value?.join&&!value?.attendance&&value?.close&&<View style={[{backgroundColor:theme.icon.dismiss},{width:'100%'},style.missing]}>
                 <SimpleLineIcons style={{marginRight:5}} name="close" size={16} color={theme.text.th3} />
                 <Text style={[{color:theme.text.th3},style.btn_text]}>Missing</Text>
+            </View>}
+            {/*@ts-ignore*/}
+            {!load&&value?.open&&!value?.join&&value?.close&&<View style={[{backgroundColor:theme.icon.th3},{width:'100%'},style.missing]}>
+                <Text style={[{color:theme.text.th3},style.btn_text]}>Close</Text>
             </View>}
         </View>
     )

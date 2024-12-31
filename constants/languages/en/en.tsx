@@ -5,6 +5,13 @@ const en={
             login:{
                 false:'Wrong email or password',
             },
+            changePassword:{
+                length:'Password must have at least 8 characters.',
+                confirm:'Password and confirm password must be the same.',
+                upper:'Password must have at least one capital letter.',
+                special:'Password must have at least one special signature.',
+                wrong:'Error during update.'
+            },
             remove:{
                 register:'Did you sure you want to remove this register?',
             },
@@ -103,8 +110,37 @@ const en={
               pre:'Pre step',
               next:'Next step',
               submit:'Submit',
-          }
-      }
+          },
+
+      },
+        event:{
+            type:{
+                opTitle:'Select the event type',
+                opDes:'By default, it will be an internal event within the club. These events are open to club members only.',
+                inputTitle:'Choose the main event',
+                inputDes:'When selecting the main event, this event will be in a waiting state for approval. Once approved, the event can be open to all students to participate.',
+                options:{
+                    true:'Join the main event.',
+                    false:'Internal events.',
+                }
+            },
+            event_name:{
+                title:'Input the event name',
+                des:'The event name will be displayed mainly and is the content used to search for events.'
+            },
+            event_sort:{
+                title:'Enter a short description',
+                des:'A short description appears outside the event and describes the main content of the event.'
+            },
+            event_full:{
+                title:'Enter a full description',
+                des:'The long description needs to describe the event\'s content in detail and be displayed within the event details section.'
+            },
+            event_date:{
+                title:'Select the event start and end date',
+                des:'The default start and end date will be the date the event was created. The end date must be greater than or equal to the start date.'
+            }
+        }
     },
     head:{
       home:'Home',

@@ -26,10 +26,6 @@ const ListMembers=()=>{
     }, [all]);
     //
     useEffect(() => {
-        console.log(choose);
-    }, [choose]);
-    //
-    useEffect(() => {
         console.log('data:members');
         console.log(data?.members);
         setSearchData(data?.members);
@@ -66,7 +62,7 @@ const ListMembers=()=>{
     }
     return (
         <View style={[{backgroundColor:theme.background.main},style.container]}>
-            <Text style={style.title}>Members (30)</Text>
+            <Text style={style.title}>Members ({data?.members?.length??0})</Text>
             <Text style={[{color:theme.text.second},style.note]}>Choose member or input them member id to search.</Text>
             <Search value={search} set={setSearch}/>
             <View style={style.action}>

@@ -1,8 +1,12 @@
-import React, {useEffect, useRef} from "react";
+// @ts-nocheck
+import React, {useEffect, useRef, useState} from "react";
 import {Image, ScrollView, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {useNavigation, useRoute} from "@react-navigation/core";
 import EventScreen from "@/app/viewModels/viewVM/events/eventDetail";
 import useData from "@/contexts/datas/data";
+import FullClub from "@/app/components/skeletons/fullClub";
+import FullEvent from "@/app/components/skeletons/fullEvent";
+import EventVM from "@/app/viewModels/eventVM/eventVM";
 
 //
 const style=StyleSheet.create({
@@ -54,11 +58,27 @@ const EventDetail=()=>{
     const navigator=useNavigation();
     const routes=useRoute();
     // @ts-ignore
-    const {event}=routes.params;
+    const {id}=routes.params;
+    const [event,setEvent]=useState(null)
     const {data,setData}=useData();
+    const {detail}=EventVM();
+    useEffect(() => {
+        const fetch=async ()=>{
+            try{
+                const {status,event:value}= await detail(id);
+                if(status){
+                    setEvent(value);
+                }
+            }catch (e) {
+                console.log('UI: '+e);
+            }
+        }
+        fetch();
+    }, [id]);
     useEffect(()=>{
         setData({...data,currentEvent:event});
     },[event])
+
     const handelClub = () => {
         // @ts-ignore
         navigator.navigate('clubs', {
@@ -69,7 +89,8 @@ const EventDetail=()=>{
 
     return (
         <View style={style.container}>
-            <TouchableOpacity onPress={event?.isMain?()=>{}:handelClub} style={style.by}>
+            {!event&&<FullEvent/>}
+            {event&&<TouchableOpacity onPress={event?.isMain?()=>{}:handelClub} style={style.by}>
                 {event.isMain&&<Image  style={style.ava} source={require('../../../../../assets/images/splash-icon.png')} />}
                 {!event.isMain&&!event?.ava&&<Image  style={style.ava} source={require('../../../../../assets/images/splash-icon.png')} />}
                 {!event.isMain&&event?.ava&&<Image source={{uri:event?.ava}} style={style.ava} />}
@@ -79,10 +100,10 @@ const EventDetail=()=>{
                     <Text numberOfLines={2} style={style.name_event}>{event?.name}</Text>
                     <Text numberOfLines={2} style={style.date}>{event?.created_at}</Text>
                 </View >
-            </TouchableOpacity>
-            <View style={style.content}>
-                <EventScreen/>
-            </View>
+            </TouchableOpacity>}
+            {event&&<View style={style.content}>
+                <EventScreen data={event}/>
+            </View>}
         </View>
     )
 }

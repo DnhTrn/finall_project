@@ -24,6 +24,7 @@ const ClubVM:any=()=>{
     // lay cac cau lac bo nguoi dung da tham gia
     const joined:any=async ()=>{
         try{
+            console.log('joined check');
             return await modelJoined();
         }catch (e) {
             console.log(e);

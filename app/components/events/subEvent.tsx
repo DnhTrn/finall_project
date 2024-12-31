@@ -9,7 +9,7 @@ const Sub=({item}:any)=>{
     const navigation=useNavigation();
     return (
         //@ts-ignore
-        <TouchableOpacity onPress={()=>navigation.navigate('event-detail',{event:item})} style={style.container} >
+        <TouchableOpacity onPress={()=>navigation.navigate('event-sub-detail',{id:item?.id})} style={style.container} >
             <View style={style.by}>
                 {item.isMain||!item.ava&&<Image  style={style.ava} source={require('../../../assets/images/splash-icon.png')} />}
                 {!item.isMain&&item.ava&&<Image source={{uri:item?.ava}} style={style.ava} />}
@@ -22,8 +22,8 @@ const Sub=({item}:any)=>{
             <View style={style.content}>
                 <Text numberOfLines={2} >{item?.sort_description}</Text>
                 <View style={style.start}>
-                    <Text numberOfLines={2} style={style.date}>Start at: {item?.created_at}</Text>
-                    <Text  numberOfLines={2} style={[{marginLeft:5},style.date]}>End at: {item?.created_at}</Text>
+                    <Text numberOfLines={2} style={style.date}>Start at: {item?.start_at}</Text>
+                    <Text  numberOfLines={2} style={[{marginLeft:5},style.date]}>End at: {item?.end_at}</Text>
                 </View>
                 {item?.imgs&&item?.imgs.length>0&&<Image style={style.img} source={{uri:item?.imgs[0]}} />}
             </View>

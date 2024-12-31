@@ -18,6 +18,9 @@ import listMembers from "@/app/views/uis/clubs/managers/member/listMembers";
 import clubEdit from "@/app/views/uis/clubs/managers/club/clubEdit";
 import policy from "@/app/views/uis/clubs/policy";
 import UserRequest from "@/app/views/uis/clubs/managers/member/requests";
+import EventManagerDetail from "@/app/views/uis/clubs/managers/events/content/detail";
+import EventEdit from "@/app/views/uis/clubs/edits/eventEdit";
+import JoinedEvent from "@/app/views/uis/clubs/managers/events/content/joined";
 
 const ClubNavigation=createNativeStackNavigator();
 const ClubIndex=()=>{
@@ -39,7 +42,9 @@ const ClubIndex=()=>{
                 <ClubNavigation.Screen name={'club-management-member-list'} options={{header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={listMembers}/>
                 <ClubNavigation.Screen name={'club-management-detail-edit'} options={{header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={clubEdit}/>
                 <ClubNavigation.Screen name={'club-policy'} options={{header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={policy}/>
-
+                <ClubNavigation.Screen name={'event-manager-detail'} options={{header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={EventManagerDetail}/>
+                <ClubNavigation.Screen name={'event-manager-edit'} options={{gestureEnabled: false,header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={EventEdit}/>
+                <ClubNavigation.Screen name={'event-manager-joined'} options={{gestureEnabled: false,header:()=><Header back={true} title={''} avata={false} search={false}/>}} component={JoinedEvent}/>
             </ClubNavigation.Navigator>
         )
 }

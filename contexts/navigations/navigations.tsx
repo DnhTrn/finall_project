@@ -19,8 +19,9 @@ export const NavigationService:any = ({children}:any)=>{
     //
     const navigationList:string[]=['home','clubs','notification','events','calendar','menu'];
     //
-    const hiddenList:string[]=['club-create','club-policy','club-management-member',
-        'club-management-event','login','club-management-managers','club-request-detail',
+    const hiddenList:string[]=['club-create','club-policy','club-management-member','event-list','change-password',
+        'event-register','event-manager-detail','event-manager-edit','event-manager-joined',
+        'event-overview','login','club-management-managers','club-request-detail','event-create',
         'club-management-request','club-management-member-list','file-detail','club-request-edit'
         ,'club-management-club','club-management-detail-edit','event-detail','event-content','event-members'];
     // Hàm đệ quy để lấy tên màn hình cuối cùng
