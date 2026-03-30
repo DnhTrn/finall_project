@@ -38,21 +38,12 @@ Dự án được chia thành các nhánh (branches) theo từng phần cụ th�
 
 ## 📸 Screenshots & Demo
 
-| Web Admin Dashboard | Mobile App Interface |
-|:---:|:---:|
-| <img width="758" height="438" alt="Ảnh màn hình 2026-03-30 lúc 11 19 04" src="https://github.com/user-attachments/assets/0dc81b92-bad1-40da-8ec3-0e0fbfe3d801" />
-<img width="764" height="437" alt="Ảnh màn hình 2026-03-30 lúc 11 17 50" src="https://github.com/user-attachments/assets/4c3e9f1a-ad73-470c-ba2a-311b8f7a6de9" />
-<img width="754" height="433" alt="Ảnh màn hình 2026-03-30 lúc 11 20 33" src="https://github.com/user-attachments/assets/dffa0856-8dbc-4479-9da0-faef67f4b4de" />
-<img width="752" height="427" alt="Ảnh màn hình 2026-03-30 lúc 11 21 28" src="https://github.com/user-attachments/assets/5ea76541-32eb-4071-bb64-d09908b9897e" />
-
-
-
-|<img width="750" height="522" alt="Ảnh màn hình 2026-03-30 lúc 11 21 56" src="https://github.com/user-attachments/assets/4e2d0810-ddb8-4025-8fd4-5bee159ef072" />
-<img width="673" height="482" alt="Ảnh màn hình 2026-03-30 lúc 11 23 17" src="https://github.com/user-attachments/assets/3b1ba768-ff4d-42d7-834b-be4cce04d623" />
-<img width="701" height="512" alt="Ảnh màn hình 2026-03-30 lúc 11 23 04" src="https://github.com/user-attachments/assets/3b059533-c7ef-44b6-804a-1e42e6cdbe38" />
-<img width="288" height="542" alt="Ảnh màn hình 2026-03-30 lúc 11 22 39" src="https://github.com/user-attachments/assets/232ecf66-2405-4b4f-ae2b-b159089b8ed0" />
-
-|
+| 💻 Web Admin Dashboard | 📱 Mobile App Interface |
+| :---: | :---: |
+| <img width="450" alt="Web Admin 1" src="https://github.com/user-attachments/assets/0dc81b92-bad1-40da-8ec3-0e0fbfe3d801" /> | <img width="250" alt="Mobile App 1" src="https://github.com/user-attachments/assets/4e2d0810-ddb8-4025-8fd4-5bee159ef072" /> |
+| <img width="450" alt="Web Admin 2" src="https://github.com/user-attachments/assets/4c3e9f1a-ad73-470c-ba2a-311b8f7a6de9" /> | <img width="250" alt="Mobile App 2" src="https://github.com/user-attachments/assets/3b1ba768-ff4d-42d7-834b-be4cce04d623" /> |
+| <img width="450" alt="Web Admin 3" src="https://github.com/user-attachments/assets/dffa0856-8dbc-4479-9da0-faef67f4b4de" /> | <img width="250" alt="Mobile App 3" src="https://github.com/user-attachments/assets/3b059533-c7ef-44b6-804a-1e42e6cdbe38" /> |
+| <img width="450" alt="Web Admin 4" src="https://github.com/user-attachments/assets/5ea76541-32eb-4071-bb64-d09908b9897e" /> | <img width="250" alt="Mobile App 4" src="https://github.com/user-attachments/assets/232ecf66-2405-4b4f-ae2b-b159089b8ed0" /> |
 
 ## ⚙️ Getting Started
 
